@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Google.Apis.Services;
+using Google.Apis.Books.v1;
 
 namespace GoogleBooksApi
 {
@@ -10,6 +7,11 @@ namespace GoogleBooksApi
     {
         static void Main(string[] args)
         {
+            var service = new BooksService(new BaseClientService.Initializer
+            {
+                ApplicationName = "Google",
+                ApiKey = "AIzaSyBxjx5JZSOxQaC6wez-9bJ6I3Alms0QFXY",
+            });
         }
     }
 }
